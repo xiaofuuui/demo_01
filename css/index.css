@@ -1,0 +1,366 @@
+/* 公共部分 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: #b0b0b0;
+}
+
+.common {
+    width: 1226px;
+    margin: 0 auto;
+}
+
+/* 字体 */
+@font-face {
+    font-family: 'icomoon';
+    src: url('../fonts/icomoon.eot?w5ah1b');
+    src: url('../fonts/icomoon.eot?w5ah1b#iefix') format('embedded-opentype'),
+        url('../fonts/icomoon.ttf?w5ah1b') format('truetype'),
+        url('../fonts/icomoon.woff?w5ah1b') format('woff'),
+        url('../fonts/icomoon.svg?w5ah1b#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+/* 内容部分 */
+.content {
+    margin-top: 0;
+    overflow: hidden;
+}
+
+/* 轮播图部分 */
+.content-banner {
+    position: relative;
+    height: 664px;
+    overflow: hidden;
+}
+
+.content-banner-top {
+    position: absolute;
+    height: 460px;
+}
+
+.content-banner-top .banner-biaoti {
+    position: absolute;
+    width: 234px;
+    height: 460px;
+    padding: 20px 0;
+    background-color: rgba(105, 101, 101, .6);
+    z-index: 1;
+}
+
+.content-banner-top .banner-biaoti>li {
+    height: calc(420px/10);
+    padding-left: 30px;
+    line-height: calc(420px/10);
+    list-style: none;
+}
+
+.content-banner-top .banner-biaoti>li::after {
+    content: '';
+    position: absolute;
+    right: 20px;
+    font-size: 18px;
+    font-family: 'icomoon';
+    color: #fff;
+}
+
+.content-banner-top .banner-biaoti>li a {
+    display: inline-block;
+    height: calc(420px/10);
+    width: 204px;
+    color: #fff;
+}
+
+.banner-neirong {
+    position: absolute;
+    left: 234px;
+    height: 460px;
+    background-color: transparent;
+    z-index: 1;
+}
+
+.banner-neirong li {
+    position: absolute;
+    top: 0;
+    display: none;
+    height: 460px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 5px rgba(170, 169, 169, 0.6);
+    list-style: none;
+    cursor: pointer;
+}
+
+.banner-neirong li span {
+    display: inline-block;
+    width: calc(992px/4);
+    height: calc(440px/6);
+}
+
+.banner-neirong li span div {
+    float: left;
+    margin: 16px 20px;
+    width: 41px;
+    height: 41px;
+    font-size: 12px;
+    line-height: 41px;
+    text-align: center;
+    box-shadow: 0px 0px 5px rgba(170, 169, 169, 0.6);
+    background-color: #fff;
+}
+
+.banner-neirong li span p {
+    float: left;
+    font-size: 13px;
+    line-height: calc(440px/6);
+}
+
+.content-banner-top ol {
+    position: absolute;
+    top: 0;
+    left: 0px;
+    width: calc(1226px*4);
+    list-style: none;
+}
+
+
+
+.content-banner-top ol li {
+    float: left;
+    width: 1226px;
+}
+
+.content-banner-top ol li a img {
+    width: 1226px;
+    height: 460px;
+}
+
+.content-banner-top .content-left,
+.content-banner-top .content-right {
+    position: absolute;
+    top: 50%;
+    display: none;
+    transform: translateY(-35px);
+    width: 40px;
+    height: 70px;
+    font-family: 'icomoon';
+    color: #b0b0b0;
+    text-align: center;
+    line-height: 70px;
+    font-size: 30px;
+    background: rgba(0, 0, 0, 0.6);
+    cursor: pointer;
+}
+
+.content-left {
+    left: 234px;
+}
+
+.content-banner-top .content-right {
+    right: -1226px;
+}
+
+.lunbo {
+    position: absolute;
+    bottom: 20px;
+    left: 602px;
+    width: 75px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+}
+
+.lunbo span {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin: 0 5px;
+    border: 2px solid #b0b0b0;
+    border-radius: 50%;
+
+}
+
+.yuanquan {
+    background-color: #fff;
+}
+
+/* 底部广告部分 */
+.content-banner-bottom {
+    position: absolute;
+    margin-bottom: 20px;
+    bottom: 0px;
+    width: 1226px;
+    height: 170px;
+}
+
+.banner-bottom-left {
+    float: left;
+    padding: 3px;
+    width: 234px;
+    height: 170px;
+    background-color: #665e57;
+}
+
+
+.banner-bottom-left ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.banner-bottom-left ul li {
+    padding-top: 15px;
+    width: 76px;
+    height: 82px;
+    font-size: 12px;
+    text-align: center;
+    list-style: none;
+}
+
+.banner-bottom-left ul li a {
+    display: inline-block;
+
+}
+
+.banner-bottom-left ul li a img {
+    width: 24px;
+    height: 24px;
+    margin: 0 24px 5px;
+}
+
+.banner-bottom-right {
+    float: left;
+    width: 978px;
+    height: 170px;
+}
+
+.banner-bottom-right ul {
+    width: 1226px;
+}
+
+.banner-bottom-right ul li {
+    float: left;
+    width: 316px;
+    height: 170px;
+    margin-left: 15px;
+    list-style: none;
+}
+
+.banner-bottom-right ul li a img {
+    width: 316px;
+    height: 170px;
+}
+
+/* 广告区域部分 */
+.banner {
+    width: 100%;
+    background-color: #f5f5f5;
+    overflow: hidden;
+}
+
+.home-banner {
+    width: 1226px;
+    height: 120px;
+    margin: 25px auto;
+}
+
+.home-banner a {
+    display: inline-block;
+    width: 1226px;
+    height: 120px;
+}
+
+.banner-content {
+    height: 686px;
+    margin-bottom: 11px;
+}
+
+.banner-content-title {
+    position: relative;
+    height: 58px;
+    line-height: 58px;
+    background-color: #f5f5f5;
+}
+
+.banner-content-title h2 {
+    font-weight: 400;
+}
+
+.banner-content-title a {
+    position: absolute;
+    top: 0px;
+    right: 30px;
+    color: black;
+    line-height: 58px;
+}
+
+.banner-content-title a span {
+    position: absolute;
+    top: 20px;
+    display: inline-block;
+    margin-left: 10px;
+    width: 20px;
+    height: 20px;
+    color: #fff;
+    line-height: 20px;
+    font-family: icomoon;
+    border-radius: 50%;
+    background-color: rgba(105, 101, 101, .6);
+}
+
+.banner-content-main {
+    height: 614px;
+}
+
+
+
+.banner-content-main ul li:nth-child(n+2) {
+    float: left;
+    margin: 0 0 14px 14px;
+    width: 234px;
+    height: 300px;
+    background-color: #fff;
+    list-style: none;
+}
+
+.banner-content-main ul li:first-of-type {
+    float: left;
+    width: 234px;
+    height: 614px;
+    list-style: none;
+}
+
+.banner-content-main ul li:nth-child(n+2) a {
+    margin: 0 17px;
+    text-align: center;
+
+}
+
+.banner-content-main ul li:nth-child(n+2) a h3 {
+    margin: 0 10px 5px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #333;
+}
+
+.desc {
+    margin: 0 10px 10px;
+    height: 18px;
+    font-size: 13px;
+    color: #b0b0b0;
+}
+
+.price {
+    color: #ff6700;
+}
+
+.price span {
+    margin-left: 5px;
+    text-decoration: line-through;
+    color: #b0b0b0;
+}

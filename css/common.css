@@ -1,0 +1,404 @@
+/* 公共部分 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: #b0b0b0;
+}
+
+.common {
+    width: 1226px;
+    margin: 0 auto;
+}
+
+/* 字体 */
+@font-face {
+    font-family: 'icomoon';
+    src: url('../fonts/icomoon.eot?w5ah1b');
+    src: url('../fonts/icomoon.eot?w5ah1b#iefix') format('embedded-opentype'),
+        url('../fonts/icomoon.ttf?w5ah1b') format('truetype'),
+        url('../fonts/icomoon.woff?w5ah1b') format('woff'),
+        url('../fonts/icomoon.svg?w5ah1b#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+/* topnav顶部导航栏 */
+.topnav {
+    height: 40px;
+    line-height: 40px;
+    font-size: 12px;
+    color: #b0b0b0;
+    background-color: #333;
+}
+
+.top {
+    width: 1226px;
+    height: 40px;
+    background-color: #333;
+}
+
+.topnav-left {
+    float: left;
+
+}
+
+.topnav-left a,
+.topnav-right a {
+    font-size: 12px;
+}
+
+.topnav-left .sep,
+.topnav-right .sep {
+    margin: 0 2.8px;
+    color: #424242;
+}
+
+.topnav-right {
+    float: right;
+}
+
+/* 购物车部分 */
+.topnav-right .shopcart {
+    position: relative;
+    display: inline-block;
+    margin-left: 25px;
+    width: 120px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background-color: #424242;
+    cursor: pointer;
+    z-index: 3;
+}
+
+.topnav-right .shopcart::before {
+    content: '';
+    font-family: 'icomoon';
+    position: absolute;
+    left: 15px;
+    font-size: 15px;
+}
+
+.topnav-right .shopcart::after {
+    content: '( 0 )';
+    position: absolute;
+    font-size: 12px;
+    right: 8px;
+}
+
+/* 购物车悬停效果 */
+.shopcart_content {
+    position: absolute;
+    display: none;
+    top: 40px;
+    right: 0;
+    width: 315px;
+    height: 100px;
+    font-size: 12px;
+    line-height: 100px;
+    text-align: center;
+    color: #333;
+    background-color: #fff;
+    box-shadow: 0px 0px 8px #d6d2d2;
+    z-index: 2;
+}
+
+/* 主导航栏部分 */
+.mainnav {
+    position: relative;
+    width: 100%;
+    height: 100px;
+    line-height: 100px;
+}
+
+/* 主导航栏logo */
+.mainnav-logo {
+    position: absolute;
+    top: 23px;
+    width: 56px;
+    height: 56px;
+}
+
+.mainnav-logo a img {
+    width: 56px;
+    height: 56px;
+}
+
+/* 主导航栏本体 */
+.mainnav-nav {
+    position: relative;
+    float: left;
+    margin-left: 182px;
+    height: 100px;
+    z-index: 999;
+}
+
+.mainnav-nav-biaoti {
+    width: 100%;
+    height: 100%;
+}
+
+.mainnav-nav>ul>li {
+    float: left;
+    list-style: none;
+    padding: 0 10px;
+}
+
+.mainnav-nav>ul>li a {
+    color: #333;
+}
+
+.mainnav-neirong {
+    position: absolute;
+    display: none;
+    top: 100px;
+    left: -530px;
+    height: 230px;
+    width: 1920px;
+
+}
+
+.mainnav-nav-neirong {
+    display: none;
+    height: 230px;
+    width: 1230px;
+    margin: 0 auto;
+    box-shadow: 0px 2px 8px #b9b3b3;
+    z-index: 999;
+    background-color: #fff;
+    list-style: none;
+}
+
+.topborder {
+    border-top: 1px solid #b0b0b0;
+}
+
+.mainnav-nav-neirong li {
+    float: left;
+    width: calc(1230px/6);
+    height: 230px;
+    text-align: center;
+
+}
+
+.mainnav-nav-neirong li div span {
+    display: inline-block;
+    margin: 30px 0 5px;
+    width: 120px;
+    height: 120px;
+    line-height: 120px;
+    box-shadow: 0px 0px 8px #e2e2e2;
+}
+
+.mainnav-nav-neirong li div span a {
+    color: #333;
+}
+
+.mainnav-nav-neirong li div p {
+    padding: 5px 0;
+    width: 205px;
+    height: 31px;
+    line-height: 31px;
+}
+
+.mainnav-nav-neirong li div p a {
+    font-size: 13px;
+    color: #333;
+}
+
+.mainnav-nav-neirong li div p:last-of-type a {
+    color: #ff6700;
+}
+
+/* 主导航栏搜索部分 */
+.mannav-search {
+    float: left;
+    margin-left: 110px;
+    margin-top: 50px;
+    transform: translateY(calc(-50px*0.5));
+    width: 300px;
+    height: 50px;
+}
+
+.mannav-search input {
+    position: absolute;
+    top: 0;
+    width: 250px;
+    height: 50px;
+    padding: 0 5px;
+    border: 1px solid #b0b0b0;
+    border-right: 0;
+    outline: none;
+}
+
+.mannav-search span {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 50px;
+    height: 50px;
+    font-family: 'icomoon';
+    text-align: center;
+    line-height: 50px;
+    font-size: 18px;
+    border: 1px solid #b0b0b0;
+}
+
+
+
+/* footer 尾部 */
+footer {
+    height: 800px;
+    width: 100%;
+}
+
+/* 尾部最上层导航 */
+.footer-service {
+    width: 1226px;
+    height: 80px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.footer-service>ul>li {
+    float: left;
+    width: 20%;
+    height: 26px;
+    margin: 27px 0;
+    text-align: center;
+    border-right: 1px solid #e0e0e0;
+    list-style: none;
+
+}
+
+.footer-service>ul>li span {
+    font-family: 'icomoon';
+}
+
+.footer-service>ul>li:last-of-type {
+    border-right: 0;
+}
+
+.footer-service>ul>li a {
+    color: #616161;
+
+}
+
+/* 尾部联系方式 */
+.footer-links {
+    height: 380px;
+}
+
+.footer-links dl {
+    float: left;
+    width: 160px;
+    font-size: 14px;
+}
+
+.footer-links dl dt {
+    margin: 25px 0px;
+}
+
+.footer-links dl dd {
+
+    padding: 5px 0;
+}
+
+.footer-links dl dd a {
+    font-size: 12px;
+    color: #757575;
+}
+
+/* 联系方式中联系客服 */
+.contact {
+    float: right;
+    margin: 60px 0 10px 0;
+    width: 20%;
+    font-size: 12px;
+    border-left: 1px solid #e0e0e0;
+    text-align: center;
+    color: #616161;
+
+}
+
+.contact P:last-of-type {
+    padding: 8px 0;
+}
+
+.contact .phone {
+    font-size: 22px;
+    line-height: 1;
+    color: #ff6700;
+}
+
+.contact a {
+    display: inline-block;
+    width: 118px;
+    height: 28px;
+    font-size: 12px;
+    line-height: 28px;
+    font-family: 'icomoon';
+    border: 1px solid #ff6700;
+    color: #ff6700;
+}
+
+/* 尾部站点信息 */
+/* 尾部logo */
+.footer-logo {
+    position: absolute;
+    top: 30px;
+    width: 56px;
+    height: 56px;
+}
+
+.site-info {
+    position: relative;
+    width: 100%;
+    height: 337px;
+    background-color: #fafafa;
+}
+
+.site-info-banner {
+    width: 1226px;
+    margin: 0 auto;
+    height: 337px;
+    background-color: #fafafa;
+}
+
+.footer-logo a img {
+    width: 56px;
+    height: 56px;
+}
+
+/* 尾部信息文本 */
+.info-text {
+    float: left;
+    padding: 30px 0 0 77px;
+}
+
+/* 网点通用模块 */
+.sites {
+    font-size: 12px;
+    color: #b0b0b0;
+
+}
+
+.sites a {
+    font-size: 12px;
+    color: #757575;
+}
+
+/* 网点图片 */
+.sites-img {
+    margin-top: 5px;
+}
+
+.sites-img a img {
+    width: 85px;
+    height: 28px;
+}
